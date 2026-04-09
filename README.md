@@ -1,7 +1,39 @@
  to-md
 
 将文本、代码或 PDF 转换为 Markdown 格式的 Claude Code Skill。
+##需求：
+1.claude code电子书转成markdown，写脚本或者用to-md skill+写脚本均可。
+2.claude code skills，将claude code泄露的源码和泄露后的电子书蒸馏成skills，vibe coding喂给coding agent时AI直接可以通过claude code demo的模型开发出各种衍生agent。claude code to everything！
 
+##design.md
+大的复杂文件结构：
+<img width="1733" height="985" alt="image" src="https://github.com/user-attachments/assets/0ae849d5-2d3a-490b-819c-8a275fd94388" />
+~/.claude/skills/react-component-review/
+  ├── SKILL.md                  # 核心指令 + 元数据（建议控制在 400 行内）
+  │
+  ├── templates/                # 常用模板（Claude 按需读取）
+  │   ├── functional.tsx.md
+  │   └── class-component.md
+  │
+  ├── examples/                 # 优秀/反例（给 Claude 看标准）
+  │   ├── good.md
+  │   └── anti-pattern.md
+  │
+  ├── references/               # 规范、规则、禁用词表
+  │   ├── hooks-rules.md
+  │   └── naming-convention.md
+  │
+  └── scripts/                  # 可执行脚本（需开启 code execution）
+      ├── validate-props.py
+      └── check-cycle-deps.sh
+
+
+##task.md
+
+TODO LIST
+
+##更新日志
+【每2到3天更一次吧】
 ## 功能特性
 
 - **文本转 Markdown** - 直接粘贴文本内容，快速转换为 Markdown 格式
