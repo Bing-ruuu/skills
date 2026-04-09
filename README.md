@@ -79,6 +79,4 @@ def hello():
 - 加密或损坏的 PDF 文件无法处理
 - 文件大小超过 1MB 时建议分段处理
 
-## License
 
-MIT
